@@ -1,0 +1,12 @@
+[uwsgi]
+uid = <%= node['django_app']['user']%>
+socket = 127.0.0.1:8000
+# Master process enabled
+master = true
+virtualenv = <%= node['django_app']['virtual_env'] %>
+chdir = <%= node['django_app']['path'] %>
+module = <%= node['django_app']['app_name'] %>.wsgi:application
+processes = 4
+stats = :1717
+socket-timeout = 30
+buffer-size = 8192

@@ -1,0 +1,8 @@
+{
+	"wpblog":{
+		"db_password": "dbpass1234"
+	},
+	"run_list": [
+        "recipe[wpblog::default]"
+    ]
+}

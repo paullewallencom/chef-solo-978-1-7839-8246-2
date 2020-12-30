@@ -1,0 +1,23 @@
+upstream django_uwsgi_backend {
+    server 127.0.0.1:8000;
+}
+
+server {
+    listen 80;
+    server_name localhost;
+
+    # Make sure we don't accept file sizes higher than this.
+    client_max_body_size 512K;
+
+    include uwsgi_params;
+    location / {
+        gzip on;
+        uwsgi_pass django_uwsgi_backend;
+        uwsgi_read_timeout 10s;
+        uwsgi_send_timeout 20s;
+        send_timeout 1m;
+        keepalive_timeout 1m;
+
+    }
+
+}

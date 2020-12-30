@@ -1,0 +1,71 @@
+DEPENDENCIES
+  apache2
+    git: git://github.com/opscode-cookbooks/apache2.git
+    revision: 45c0a028c538725b0536160e012c95c35663dcef
+  apt
+    git: git://github.com/opscode-cookbooks/apt.git
+    revision: f21690e99aa7307b35ad5e58f99543270f905306
+  database
+    git: git://github.com/opscode-cookbooks/database.git
+    revision: c69391d6e74893d3e8377eb58ea22fd0cb3568bf
+  php
+    git: git://github.com/opscode-cookbooks/php.git
+    revision: 180e5d23037809e840d6ed8600f50823c513791a
+  wpblog
+    path: .
+
+GRAPH
+  apache2 (1.10.1)
+    iptables (>= 0.0.0)
+    logrotate (>= 0.0.0)
+    pacman (>= 0.0.0)
+  apt (2.3.9)
+  aws (2.1.1)
+  build-essential (2.0.0)
+  chef_gem (0.1.0)
+  chef_handler (1.1.6)
+  database (2.1.6)
+    aws (>= 0.0.0)
+    mysql (>= 5.0.0)
+    mysql-chef_gem (>= 0.0.0)
+    postgresql (>= 1.0.0)
+    xfs (>= 0.0.0)
+  iis (2.1.0)
+    windows (>= 1.2.6)
+  iptables (0.13.2)
+  java (1.22.0)
+  logrotate (1.5.0)
+  mysql (5.1.8)
+  mysql-chef_gem (0.0.2)
+    build-essential (>= 0.0.0)
+    mysql (>= 0.0.0)
+  openssl (1.1.0)
+  pacman (1.1.1)
+  php (1.4.7)
+    build-essential (>= 0.0.0)
+    iis (>= 0.0.0)
+    mysql (>= 0.0.0)
+    windows (>= 0.0.0)
+    xml (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  postgresql (3.3.4)
+    apt (>= 0.0.0)
+    build-essential (>= 0.0.0)
+    openssl (>= 0.0.0)
+  rvm (0.9.2)
+    chef_gem (>= 0.0.0)
+    java (>= 0.0.0)
+  windows (1.30.2)
+    chef_handler (>= 0.0.0)
+  wpblog (0.1.0)
+    apache2 (>= 0.0.0)
+    apt (>= 0.0.0)
+    database (>= 0.0.0)
+    php (>= 0.0.0)
+    rvm (>= 0.0.0)
+  xfs (1.1.0)
+  xml (1.2.4)
+    build-essential (>= 0.0.0)
+  yum (3.2.0)
+  yum-epel (0.3.6)
+    yum (~> 3.0)

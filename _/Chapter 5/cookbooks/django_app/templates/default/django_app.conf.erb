@@ -1,0 +1,9 @@
+# upstart script for <%= node[:django_app][:app_name] %>
+
+description "<%= node[:django_app][:app_name] %>: script for running <%= node[:django_app][:app_name] %>"
+start on runlevel [2345]
+stop on runlevel [06]
+respawn
+respawn limit 10 5
+
+exec <%= node[:django_app][:virtual_env] %>/bin/uwsgi --ini <%= node[:django_app][:uwsgi_path] %>

@@ -1,0 +1,44 @@
+DEPENDENCIES
+  apt
+    git: git://github.com/opscode-cookbooks/apt.git
+    revision: ac1917c66a9d67fb4a0afeffaa92195b7385887e
+  django_app
+    path: .
+  nginx
+    git: git://github.com/opscode-cookbooks/nginx.git
+    revision: 1830a4e1fb659025a037b8b69ec160d13f9a1496
+  python
+    git: git://github.com/opscode-cookbooks/python.git
+    revision: 574ad93c308f77cf6a3d40237be806033cfabde9
+  user
+    git: git://github.com/fnichol/chef-user.git
+    revision: 62e3e2b6848445f80ba1ff22bd82c57c63fa72e5
+
+GRAPH
+  apt (2.4.1)
+  bluepill (2.3.1)
+    rsyslog (>= 0.0.0)
+  build-essential (2.0.4)
+  django_app (0.1.0)
+    python (>= 0.0.0)
+    user (>= 0.0.0)
+  nginx (2.7.3)
+    apt (~> 2.2)
+    bluepill (~> 2.3)
+    build-essential (~> 2.0)
+    ohai (~> 2.0)
+    runit (~> 1.2)
+    yum-epel (~> 0.3)
+  ohai (2.0.1)
+  python (1.4.7)
+    build-essential (>= 0.0.0)
+    yum-epel (>= 0.0.0)
+  rsyslog (1.12.2)
+  runit (1.5.10)
+    build-essential (>= 0.0.0)
+    yum (~> 3.0)
+    yum-epel (>= 0.0.0)
+  user (0.3.1)
+  yum (3.2.0)
+  yum-epel (0.3.6)
+    yum (~> 3.0)

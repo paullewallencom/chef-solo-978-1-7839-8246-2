@@ -1,0 +1,6 @@
+source 'https://api.berkshelf.com'
+cookbook "apt", github: "opscode-cookbooks/apt"
+cookbook "nginx", github: "opscode-cookbooks/nginx"
+cookbook "python", github: "opscode-cookbooks/python"
+cookbook "user", github: "fnichol/chef-user"
+cookbook "django_app", path: "../django_app"
